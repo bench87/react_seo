@@ -1,0 +1,30 @@
+{
+  "name": "NodeChat",
+  "version": "0.0.0",
+  "description": "chat server",
+  "main": "index.js",
+  "scripts": {
+    "stop": "echo not implemented",
+    "build": "node ./app.js",
+    "start": "watchify -o static/browser_bundle.js -d static/js/"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "~1.0.0",
+    "express": "~4.10.6",
+    "redis": "~0.12.1",
+    "connect-redis": "~2.1.0",
+    "connect-flash": "~0.1.1",
+    "react": "~0.12.2",
+    "browserify": "~8.0.1",
+    "reactify": "~0.17.1",
+    "watchify": "~2.2.1"
+  },
+  "browserify": {
+    "transform": [
+      "reactify",
+      "envify"
+    ]
+  }
+}
